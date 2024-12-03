@@ -53,9 +53,7 @@ function onEnd()
 <div class="container-fluid mt-4">
     <div class="container-lg">
         <div class="row g-5">
-            <div class="d-none d-xl-block col-xl-3"></div>
-
-            <div class="col col-xl-9">
+            <div class="col {% if leftmenu.menuItems is not null %}col-xl-9 offset-xl-3{% endif %}">
                 {% component "breadcrumbs" %}
             </div>
         </div>
