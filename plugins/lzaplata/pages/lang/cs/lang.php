@@ -31,6 +31,9 @@
             'delete' => [
                 'label' => 'Smazat',
             ],
+            'reorder' => [
+                'label' => 'Změnit pořadí',
+            ],
         ],
     ],
     'page' => [
@@ -94,8 +97,17 @@
             'type' => [
                 'label' => 'Typ',
             ],
+            'sort_order' => [
+                'label' => 'Pořadí',
+            ],
+            'is_published' => [
+                'label' => 'Publikováno',
+            ],
         ],
         'field' => [
+            'is_published' => [
+                'label' => 'Publikováno',
+            ],
             'title' => [
                 'label' => 'Název',
                 'comment' => 'Interní název pro zobrazení v administraci. Nebude se zobrazovat na webu.',
@@ -126,6 +138,9 @@
             'heading' => [
                 'label' => 'Nadpis',
                 'comment' => 'Nadpis obsahu na webu',
+            ],
+            'sort_order' => [
+                'label' => 'Pořadí',
             ],
             'blog_categories' => [
                 'label' => 'Kategorie',

@@ -31,6 +31,9 @@
             'delete' => [
                 'label' => 'Delete',
             ],
+            'reorder' => [
+                'label' => 'Order',
+            ],
         ],
     ],
     'page' => [
@@ -94,8 +97,17 @@
             'type' => [
                 'label' => 'Type',
             ],
+            'sort_order' => [
+                'label' => 'Order',
+            ],
+            'is_published' => [
+                'label' => 'Published',
+            ],
         ],
         'field' => [
+            'is_published' => [
+                'label' => 'Published',
+            ],
             'title' => [
                 'label' => 'Title',
                 'comment' => 'Internal name for display in the administration. It will not be displayed on the website.',
@@ -126,6 +138,9 @@
             'heading' => [
                 'label' => 'Heading',
                 'comment' => 'Content heading on the website',
+            ],
+            'sort_order' => [
+                'label' => 'Order',
             ],
             'blog_categories' => [
                 'label' => 'Categories',

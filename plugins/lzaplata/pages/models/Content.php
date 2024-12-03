@@ -7,6 +7,7 @@ use LZaplata\Files\Models\File;
 use LZaplata\Gallery\Models\Gallery;
 use Model;
 use October\Rain\Database\Traits\Multisite;
+use October\Rain\Database\Traits\Sortable;
 use Tailor\Classes\BlueprintIndexer;
 use RainLab\Blog\Models\Category;
 use RainLab\Blog\Models\Post;
@@ -22,6 +23,7 @@ class Content extends Model
     use \October\Rain\Database\Traits\SoftDelete;
     use Multisite;
     use BlueprintRelationModel;
+    use Sortable;
 
     /**
      * @var array dates to cast from the database.
@@ -88,6 +90,7 @@ class Content extends Model
         "contacts_category" => [EntryRecord::class, "blueprint" => "lzaplata_contacts_categories"],
         "blog_category"     => Category::class,
         "files_category"    => FilesCategory::class,
+        "page"              => Page::class,
     ];
 
     /**
@@ -100,6 +103,20 @@ class Content extends Model
     {
         if (!BackendAuth::userHasPermission("lzaplata.pages.content.update.type")) {
             $fields->type->disabled = true;
+        }
+
+        if (BackendAuth::userHasPermission("lzaplata.pages.content.reorder")) {
+            $latestSibling = Content::where("page_id", $this->page->id)
+                ->orderBy("sort_order", "desc")
+                ->first();
+
+            if ($latestSibling) {
+                $order = $fields->sort_order->value ?: $latestSibling->sort_order + 10;
+            } else {
+                $order = 10;
+            }
+
+            $fields->sort_order->value = $order;
         }
     }
 }

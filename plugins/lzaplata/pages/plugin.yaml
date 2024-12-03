@@ -30,6 +30,9 @@ permissions:
     lzaplata.pages.content.update.type:
         tab: 'lzaplata.pages::lang.plugin.name'
         label: 'lzaplata.pages::lang.permission.content.update.type.label'
+    lzaplata.pages.content.reorder:
+        tab: 'lzaplata.pages::lang.plugin.name'
+        label: 'lzaplata.pages::lang.permission.content.reorder.label'
     lzaplata.pages.page:
         tab: 'lzaplata.pages::lang.plugin.name'
         label: 'lzaplata.pages::lang.permission.page.label'

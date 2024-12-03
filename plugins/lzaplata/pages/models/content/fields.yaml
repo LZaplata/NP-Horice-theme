@@ -1,4 +1,8 @@
 fields:
+    is_published:
+        label: 'lzaplata.pages::lang.content.field.is_published.label'
+        type: switch
+        default: true
     title:
         label: 'lzaplata.pages::lang.content.field.title.label'
         span: left
@@ -12,13 +16,19 @@ fields:
         type: dropdown
     heading:
         label: 'lzaplata.pages::lang.content.field.heading.label'
-        span: full
+        span: left
         type: text
         comment: 'lzaplata.pages::lang.content.field.heading.comment'
         trigger:
             action: show
             field: type
             condition: 'value[text][blog][gallery][files][faq][cookies][contacts]'
+    sort_order:
+        label: 'lzaplata.pages::lang.content.field.sort_order.label'
+        span: right
+        type: number
+        permissions: lzaplata.pages.content.reorder
+        required: 1
     text:
         label: 'lzaplata.pages::lang.content.field.text.label'
         size: giant
