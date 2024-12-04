@@ -27,19 +27,85 @@ items:
             isExternal: '0'
     -
         title: 'Výroční zprávy'
+        nesting: null
         type: page
+        url: null
         code: ''
         reference: '4'
         cmsPage: page
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Veřejné zakázky'
+        nesting: null
         type: page
+        url: null
         code: ''
         reference: '5'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Volná místa'
+        type: page
+        code: ''
+        reference: '6'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Dokumenty
+        type: page
+        code: ''
+        reference: '7'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Reference
+        type: page
+        code: ''
+        reference: '8'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Stížnosti
+        type: page
+        code: ''
+        reference: '9'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Historie
+        type: page
+        code: ''
+        reference: '10'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Pokladna a podatelna'
+        type: page
+        code: ''
+        reference: '11'
         cmsPage: page
         viewBag:
             isHidden: '0'
