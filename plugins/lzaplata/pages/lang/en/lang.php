@@ -130,6 +130,9 @@
                     'cookies' => [
                         'label' => 'Cookies settings',
                     ],
+                    'pricelist' => [
+                        'label' => 'Price list',
+                    ],
                 ],
             ],
             'text' => [
@@ -154,6 +157,9 @@
             ],
             'contacts_categories' => [
                 'label' => 'Categories',
+            ],
+            'pricelist' => [
+                'label' => 'Price list',
             ],
         ],
         'create' => [

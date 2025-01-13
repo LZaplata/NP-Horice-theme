@@ -5,6 +5,7 @@ use JanVince\SmallGDPR\Models\CookiesSettings;
 use LZaplata\Files\Models\Category as FilesCategory;
 use LZaplata\Files\Models\File;
 use LZaplata\Gallery\Models\Gallery;
+use LZaplata\Pricelists\Models\Pricelist;
 use Model;
 use October\Rain\Database\Traits\Multisite;
 use October\Rain\Database\Traits\Sortable;
@@ -39,6 +40,7 @@ class Content extends Model
      * @var array rules for validation.
      */
     public $rules = [
+        "pricelist" => "required_if:type,pricelist",
     ];
 
     /**
@@ -67,6 +69,10 @@ class Content extends Model
             $types["files"] = e(trans("lzaplata.pages::lang.content.field.type.option.files.label"));
         }
 
+        if (class_exists(Pricelist::class)) {
+            $types["pricelist"] = e(trans("lzaplata.pages::lang.content.field.type.option.pricelist.label"));
+        }
+
         if (BlueprintIndexer::instance()->findSectionByHandle("FAQ\Question")) {
             $types["faq"] = "FAQ";
         }
@@ -91,6 +97,7 @@ class Content extends Model
         "blog_category"     => Category::class,
         "files_category"    => FilesCategory::class,
         "page"              => Page::class,
+        "pricelist"         => Pricelist::class,
     ];
 
     /**

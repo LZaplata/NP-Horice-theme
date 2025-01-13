@@ -22,7 +22,7 @@ fields:
         trigger:
             action: show
             field: type
-            condition: 'value[text][blog][gallery][files][faq][cookies][contacts]'
+            condition: 'value[text][blog][gallery][files][faq][cookies][contacts][pricelist]'
     sort_order:
         label: 'lzaplata.pages::lang.content.field.sort_order.label'
         span: right
@@ -74,3 +74,13 @@ fields:
             action: show
             field: type
             condition: 'value[contacts]'
+    pricelist:
+        label: 'lzaplata.pages::lang.content.field.pricelist.label'
+        nameFrom: name
+        span: left
+        type: relation
+        required: 1
+        trigger:
+            action: show
+            field: type
+            condition: 'value[pricelist]'

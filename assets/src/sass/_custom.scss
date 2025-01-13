@@ -44,7 +44,7 @@ $font-size-base:                        1rem;       // 16px
 $font-size-sm:                          .75rem;     // 12px
 
 $font-sizes: (
-    1:                                  1.5rem,         // 34px
+    1:                                  2rem,           // 32px
     2:                                  1.25rem,        // 20px
     4:                                  .9375rem,       // 15px
     6:                                  $font-size-sm,  // 12px
@@ -347,6 +347,11 @@ $files-link-color:                                  $body-color;
 $files-link-underline-color:                        $body-color;
 $files-link-hover-color:                            $primary;
 $files-link-hover-underline-color:                  $files-link-hover-color;
+
+$block-flash-message-bg:                            $primary;
+$block-flash-message-icon-font-size:                map-get($font-sizes, 1);
+$block-flash-message-icon-color:                    $white;
+$block-flash-message-text-color:                    $white;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";

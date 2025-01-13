@@ -14,6 +14,7 @@ require:
     - janvince.smallgdpr
     - lzaplata.gallery
     - lzaplata.files
+    - lzaplata.extensions
 form:
     tabs:
         fields:

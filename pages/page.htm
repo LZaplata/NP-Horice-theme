@@ -29,6 +29,10 @@ postPage = "page-post"
 
 [Files files]
 order = "position asc"
+
+[pricelist]
+
+[openinghours]
 ==
 <?php
 function onEnd()
@@ -93,6 +97,10 @@ function onEnd()
                                 {% component "gallery" gallery=content.gallery.slug %}
                             {% elseif content.type == "files" %}
                                 {% component "files" category=content.files_category.slug %}
+                            {% elseif content.type == "pricelist" %}
+                                {% component "pricelist" slug=content.pricelist.slug %}
+                            {% elseif content.type == "opening_hours" %}
+                                {% component "openinghours" slug=content.opening_hours.slug %}
                             {% elseif content.type == "faq" %}
                                 {% partial "_accordion/faq" items=faq %}
                             {% elseif content.type == "cookies" %}

@@ -130,6 +130,9 @@
                     'cookies' => [
                         'label' => 'Nastavení cookies',
                     ],
+                    'pricelist' => [
+                        'label' => 'Ceník',
+                    ],
                 ],
             ],
             'text' => [
@@ -154,6 +157,9 @@
             ],
             'contacts_categories' => [
                 'label' => 'Kategorie',
+            ],
+            'pricelist' => [
+                'label' => 'Ceník',
             ],
         ],
         'create' => [
