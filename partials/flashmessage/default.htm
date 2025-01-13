@@ -7,7 +7,7 @@
         </div>
 
         <div class="text">
-            {{ post.content|raw }}
+            {{ post.content|striptags }}
         </div>
     </div>
 {% endfor %}

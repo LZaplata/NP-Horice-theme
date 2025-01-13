@@ -16,6 +16,8 @@ handle = "Partners\Partner"
 [blogPosts flashmessage]
 postsPerPage = 1
 sortOrder = "published_at desc"
+
+[blogPosts posts]
 ==
 <?php
 function onEnd()
@@ -23,11 +25,16 @@ function onEnd()
     $blocks = $this["homepage"]->blocks;
 
     if (!is_null($blocks)) {
+        $blockTypes = [
+            "flash_message" => "flashmessage",
+            "posts"         => "posts",
+        ];
+
         foreach ($blocks as $block) {
-            if ($block->type == "flash_message") {
-                $posts = $this->page->components["flashmessage"];
-                $posts->setProperty("categoryFilter", $block->blog_category);
-                $posts->onRun();
+            if (isset($blockTypes[$block->type])) {
+                ${"block" . $block->id} = $this->page->components[$blockTypes[$block->type]];
+                ${"block" . $block->id}->setProperty("categoryFilter", $block->blog_category->slug);
+                ${"block" . $block->id}->onRun();
             }
         }
     }
@@ -40,7 +47,9 @@ function onEnd()
             {% if block.type == "slider" %}
                 {% partial "_swiper/slider" slides=slider settings=slider_settings %}
             {% elseif block.type == "image_text" %}
-                {% partial "_block/image-text.htm" image=block.image text=block.text %}
+                {% partial "_block/image-text.htm" image=block.image text=block.text heading=block.heading %}
+            {% elseif block.type == "posts" %}
+                {% component "posts" %}
             {% elseif block.type == "flash_message" %}
                 {% component "flashmessage" %}
             {% elseif block.type == "partial" %}
