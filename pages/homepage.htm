@@ -35,8 +35,8 @@ function onEnd()
 ?>
 ==
 {% for block in homepage.blocks %}
-    <div class="container-fluid{% if block.no_gutters %} g-0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-5{% endif %} block block-{{ block.type }}">
-        <div class="container{% if block.is_fluid %}-fluid{% endif %}{% if block.no_gutters %} g-0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-xl-4{% endif %}">
+    <div class="container-fluid{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-5{% endif %} block block-{{ block.type }} overflow-x-hidden">
+        <div class="container{% if block.is_fluid %}-fluid{% endif %}{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-xl-4{% endif %}">
             {% if block.type == "slider" %}
                 {% partial "_swiper/slider" slides=slider settings=slider_settings %}
             {% elseif block.type == "image_text" %}

@@ -1,9 +1,11 @@
-<div class="row row-cols-1 row-cols-lg-2 g-5">
-    <div class="col">
-        <img src="{{ image.path }}" alt="" class="img-fluid w-100">
+<div class="row row-cols-1 row-cols-lg-2 g-5 g-xl-10">
+    <div class="col d-flex">
+        <img src="{{ image.path }}" alt="" class="img-fluid w-100 object-fit-cover">
     </div>
 
     <div class="col">
-        {{ text|raw }}
+        <div class="d-flex h-100 align-items-center pe-lg-5 pe-xl-10">
+            {{ text|raw }}
+        </div>
     </div>
 </div>
