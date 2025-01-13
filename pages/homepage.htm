@@ -44,6 +44,12 @@ function onEnd()
 {% for block in homepage.blocks %}
     <div class="container-fluid{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-5{% endif %} block block-{{ block.type }}">
         <div class="container{% if block.is_fluid %}-fluid{% endif %}{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-xl-4{% endif %}">
+            {% if block.heading and block.type != "image_text" %}
+                <h2 class="mb-5 text-center">
+                    {{ block.heading }}
+                </h2>
+            {% endif %}
+
             {% if block.type == "slider" %}
                 {% partial "_swiper/slider" slides=slider settings=slider_settings %}
             {% elseif block.type == "image_text" %}
