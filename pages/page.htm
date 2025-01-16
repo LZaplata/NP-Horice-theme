@@ -103,6 +103,8 @@ function onEnd()
                                 {% component "openinghours" slug=content.opening_hours.slug %}
                             {% elseif content.type == "faq" %}
                                 {% partial "_accordion/faq" items=faq %}
+                            {% elseif content.type == "slider" %}
+                                {% partial "_swiper/slider" slides=content.slider.slides settings=content.slider %}
                             {% elseif content.type == "cookies" %}
                                 {% component "cookiesmanage" %}
                             {% elseif content.type == "contacts" %}
