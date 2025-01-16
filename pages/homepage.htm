@@ -18,6 +18,8 @@ postsPerPage = 1
 sortOrder = "published_at desc"
 
 [blogPosts posts]
+
+[blogPosts postsslider]
 ==
 <?php
 function onEnd()
@@ -28,12 +30,14 @@ function onEnd()
         $blockTypes = [
             "flash_message" => "flashmessage",
             "posts"         => "posts",
+            "posts_slider"  => "postsslider",
         ];
 
         foreach ($blocks as $block) {
             if (isset($blockTypes[$block->type])) {
                 ${"block" . $block->id} = $this->page->components[$blockTypes[$block->type]];
                 ${"block" . $block->id}->setProperty("categoryFilter", $block->blog_category->slug);
+                ${"block" . $block->id}->setProperty("rowCols", $block->row_cols);
                 ${"block" . $block->id}->onRun();
             }
         }
@@ -43,7 +47,7 @@ function onEnd()
 ==
 {% for block in homepage.blocks %}
     <div class="container-fluid{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-5{% endif %} block block-{{ block.type }}">
-        <div class="container{% if block.is_fluid %}-fluid{% endif %}{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-xl-4{% endif %}">
+        <div class="container{% if block.is_fluid %}-fluid{% else %}-lg{% endif %}{% if block.no_gutters %} g-{% if block.no_gutters_breakpoint != "xs" %}{{ block.no_gutters_breakpoint }}-{% endif %}0{% endif %}{% if loop.index > 1 and block.padding_top %} pt-xl-4{% endif %}">
             {% if block.heading and block.type != "image_text" %}
                 <h2 class="mb-5 text-center">
                     {{ block.heading }}
@@ -53,9 +57,11 @@ function onEnd()
             {% if block.type == "slider" %}
                 {% partial "_swiper/slider" slides=slider settings=slider_settings %}
             {% elseif block.type == "image_text" %}
-                {% partial "_block/image-text.htm" image=block.image text=block.text heading=block.heading %}
+                {% partial "_block/image-text.htm" image=block.image text=block.text heading=block.heading switched=block.switch_order %}
             {% elseif block.type == "posts" %}
                 {% component "posts" %}
+            {% elseif block.type == "posts_slider" %}
+                {% component "postsslider" %}
             {% elseif block.type == "flash_message" %}
                 {% component "flashmessage" %}
             {% elseif block.type == "partial" %}
@@ -64,31 +70,6 @@ function onEnd()
         </div>
     </div>
 {% endfor %}
-
-<div class="container-fluid pt-5">
-    <div class="container-lg pt-xl-4">
-        <h2 class="h1 mb-4 mb-xl-5">
-            Muzea
-        </h2>
-    </div>
-
-    {% partial "_swiper/scrollable" partial="_post/card-museum" items=this.theme.museums %}
-</div>
-
-<div class="container-fluid pt-5">
-    <div class="container-lg pt-xl-4">
-        <h2 class="h1 mb-3">
-            Infocentra
-        </h2>
-
-        <p class="mb-4 mb-xl-5 fs-2 text-dark">
-            Informační centra Správy KRNAP nabízejí návštěvníkům Krkonoš nejen komplexní informace o Krkonošském
-            národním parku, ale i o možnostech výletů za zajímavostmi, krásami a pozoruhodnostmi našich nejvyšších hor.
-        </p>
-    </div>
-
-    {% partial "_swiper/scrollable" partial="_post/card" items=this.theme.infocenters %}
-</div>
 
 <div class="py-5 border-1 border-bottom border-light">
     <div class="py-xl-4">

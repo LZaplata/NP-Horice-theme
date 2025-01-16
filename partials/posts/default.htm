@@ -1,6 +1,7 @@
 {% set posts = __SELF__.posts %}
+{% set row_cols = __SELF__.properties.rowCols %}
 
-<div class="posts row row-cols-1 row-cols-xl-4">
+<div class="posts row row-cols-{{ min(1, row_cols) }} g-5 row-cols-sm-{{ min(2, row_cols) }} gx-sm-4 row-cols-lg-{{ min(3, row_cols) }} gx-lg-5 row-cols-xl-{{ min(4, row_cols) }} row-cols-xxl-{{ row_cols }}">
     {% for post in posts %}
         {% set image = post.featured_images.first %}
 

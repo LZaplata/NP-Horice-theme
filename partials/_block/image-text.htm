@@ -1,10 +1,10 @@
-<div class="row row-cols-1 row-cols-lg-2 g-5 g-xl-10">
-    <div class="col d-flex">
+<div class="row row-cols-1 row-cols-lg-2 g-5 g-xl-10{% if switched %} switched{% endif %}">
+    <div class="col d-flex{% if switched %} order-lg-1{% endif %}">
         <img src="{{ image.path }}" alt="" class="img-fluid w-100 object-fit-cover">
     </div>
 
-    <div class="col">
-        <div class="d-flex flex-column h-100 justify-content-center pe-lg-5 pe-xl-10">
+    <div class="col{% if switched %} order-lg-0{% endif %}">
+        <div class="d-flex flex-column h-100 justify-content-center{% if switched %} ps-lg-5 ps-xl-10{% else %} pe-lg-5 pe-xl-10{% endif %}">
             <h2 class="mb-4">
                 {{ heading }}
             </h2>

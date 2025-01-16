@@ -363,6 +363,7 @@ $block-flash-message-bg:                            $primary;
 $block-flash-message-icon-font-size:                map-get($font-sizes, 1);
 $block-flash-message-icon-color:                    $white;
 $block-flash-message-text-color:                    $white;
+$block-image-text-image-border-radius:              $border-radius-lg;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
