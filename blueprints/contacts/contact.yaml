@@ -19,6 +19,10 @@ navigation:
     order: 10
 
 fields:
+    title:
+        column:
+            label: Jméno
+
     image:
         label: Obrázek
         type: fileupload
@@ -32,8 +36,6 @@ fields:
         label: Pozice
         type: text
         span: right
-        column: false
-        scope: false
 
     mobile:
         label: Mobil
@@ -61,5 +63,3 @@ fields:
         type: entries
         source: Contacts\Category
         span: left
-        column: false
-        scope: false
