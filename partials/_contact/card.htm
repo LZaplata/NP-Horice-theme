@@ -10,20 +10,20 @@
             {{ item.title }}
         </h4>
 
-        {% if item.job %}
+        {% if item.job or itemUpdate.job %}
             <p class="mb-0">
-                {{ item.job }}
+                {{ itemUpdate.job ?: item.job }}
             </p>
         {% endif %}
     </div>
 
     <div class="d-flex flex-column">
-        {% if item.mobile %}
+        {% if item.mobile or itemUpdate.mobile %}
             <p class="mobile mb-0 d-flex align-items-center">
                 <i class="icon ph ph-device-mobile me-2"></i>
 
-                <a href="tel:{{ item.mobile }}">
-                    {{ item.mobile }}
+                <a href="tel:{{ itemUpdate.mobile ?: item.mobile }}">
+                    {{ itemUpdate.mobile ?: item.mobile }}
                 </a>
             </p>
         {% endif %}

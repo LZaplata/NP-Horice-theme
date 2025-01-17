@@ -1,14 +1,11 @@
 uuid: lzaplata_contacts
 handle: Contacts\Contact
-type: structure
+type: stream
 name: Kontakty
 drafts: false
 showImport: false
 showExport: false
 multisite: true
-
-structure:
-    maxDepth: 1
 
 primaryNavigation:
     label: Kontakty
@@ -20,6 +17,12 @@ navigation:
     icon: icon-list-ul
     parent: Contacts\Contact
     order: 10
+
+customMessages:
+    buttonCreate: Nový kontakt
+    titleCreateForm: Vytvořit kontakt
+    titleUpdateForm: Upravit kontakt
+    titleIndexList: Kontakty
 
 fields:
     title:
@@ -60,9 +63,3 @@ fields:
         span: left
         column: false
         scope: false
-
-    categories:
-        label: Kategorie
-        type: entries
-        source: Contacts\Category
-        span: left
