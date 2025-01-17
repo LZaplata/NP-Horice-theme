@@ -1,11 +1,14 @@
 uuid: lzaplata_contacts
 handle: Contacts\Contact
-type: stream
+type: structure
 name: Kontakty
 drafts: false
 showImport: false
 showExport: false
 multisite: true
+
+structure:
+    maxDepth: 1
 
 primaryNavigation:
     label: Kontakty
