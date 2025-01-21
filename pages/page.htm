@@ -78,9 +78,9 @@ function onEnd()
                     {{ page.title }}
                 </h1>
 
-                <div class="contents d-flex flex-column gap-5">
+                <div class="d-flex flex-column gap-5">
                     {% for content in page.contents %}
-                        <div class="content content-{{ content.type }} {{ content.title|slug }}">
+                        <div class="{{ content.type|slug }} {{ content.type|slug }}--{{ content.title|slug }}">
                             {% if content.heading %}
                                 <h2 class="mb-4">
                                     {{ content.heading }}

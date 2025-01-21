@@ -1,6 +1,6 @@
-<div class="row row-cols-1 row-cols-lg-2 g-5 g-xl-10{% if switched %} switched{% endif %}">
+<div class="row row-cols-1 row-cols-lg-2 g-5 g-xl-10">
     <div class="col d-flex{% if switched %} order-lg-1{% endif %}">
-        <img src="{{ image.path }}" alt="" class="img-fluid w-100 object-fit-cover">
+        <img src="{{ image.path }}" alt="" class="img-fluid w-100 object-fit-cover image-text__img{% if switched %} image-text__img--switched{% endif %}">
     </div>
 
     <div class="col{% if switched %} order-lg-0{% endif %}">

@@ -313,20 +313,18 @@ $table-cell-padding-x:                  24px;
 $table-cell-padding-y:                  16px;
 $table-th-font-weight:                  $font-weight-medium;
 
-$content-text-gap-base:                 1.5rem;
-$content-text-gap-lg:                   2.5rem;
-$content-text-color:                    $gray-500;
-$content-text-strong-font-weight:       $font-weight-bold;
-
-$content-text-link-color:                   $primary;
-$content-text-link-font-weight:             $content-text-strong-font-weight;
-$content-text-link-underline-color:         $primary;
-$content-text-link-hover-color:             $gray-500;
-$content-text-link-hover-underline-color:   $gray-500;
-
-$content-text-table-head-bg:            $gray-300;
-$content-text-table-head-font-size:     $h3-font-size;
-$content-text-table-body-font-size:     $font-size-base;
+$text-gap-base:                         1.5rem;
+$text-gap-lg:                           2.5rem;
+$text-color:                            $gray-500;
+$text-strong-font-weight:               $font-weight-bold;
+$text-link-color:                       $primary;
+$text-link-font-weight:                 $text-strong-font-weight;
+$text-link-underline-color:             $primary;
+$text-link-hover-color:                 $gray-500;
+$text-link-hover-underline-color:       $gray-500;
+$text-table-head-bg:                    $gray-300;
+$text-table-head-font-size:             $h3-font-size;
+$text-table-body-font-size:             $font-size-base;
 
 $breadcrumb-margin-bottom:              0;
 $breadcrumb-divider:                    "-";
@@ -359,11 +357,12 @@ $files-link-underline-color:                        $body-color;
 $files-link-hover-color:                            $primary;
 $files-link-hover-underline-color:                  $files-link-hover-color;
 
-$block-flash-message-bg:                            $primary;
-$block-flash-message-icon-font-size:                map-get($font-sizes, 1);
-$block-flash-message-icon-color:                    $white;
-$block-flash-message-text-color:                    $white;
-$block-image-text-image-border-radius:              $border-radius-lg;
+$flash-message-bg:                                  $primary;
+$flash-message-icon-font-size:                      map-get($font-sizes, 1);
+$flash-message-icon-color:                          $white;
+$flash-message-text-color:                          $white;
+
+$image-text-image-border-radius:              $border-radius-lg;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
