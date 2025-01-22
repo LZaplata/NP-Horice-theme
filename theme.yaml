@@ -15,6 +15,9 @@ require:
     - lzaplata.gallery
     - lzaplata.files
     - lzaplata.extensions
+    - lzaplata.pages
+    - lzaplata.pricelists
+    - lzaplata.openinghours
 form:
     tabs:
         fields:
@@ -68,6 +71,14 @@ form:
                 commentAbove: 'Text k registraci v firmy v živnostenském rejstříku'
                 type: textarea
                 tab: Kontakt
+            is_published:
+                label: Publikováno
+                type: checkboxlist
+                tab: 'Sociální sítě'
+                options:
+                    header: Hlavička
+#                    footer: Patička
+                default: [header, footer]
             facebook:
                 label: Facebook
                 type: text

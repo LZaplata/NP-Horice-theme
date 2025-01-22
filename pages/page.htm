@@ -10,7 +10,7 @@ value = "{{ :fullslug }}"
 [Gallery gallery]
 imagesPerPage = 16
 
-[staticMenu leftmenu]
+[staticMenu sidebarmenu]
 
 [breadcrumbs]
 
@@ -40,7 +40,7 @@ function onEnd()
     $code = $this["page"]->menu;
     $contents = $this["page"]->contents;
 
-    $this["leftmenu"]->resetMenu($code);
+    $this["sidebarmenu"]->resetMenu($code);
 
     if (!is_null($contents)) {
         foreach ($contents as $content) {
@@ -57,7 +57,7 @@ function onEnd()
 <div class="container-fluid mt-4">
     <div class="container-lg">
         <div class="row g-5">
-            <div class="col {% if leftmenu.menuItems is not null %}col-xl-9 offset-xl-3{% endif %}">
+            <div class="col {% if sidebarmenu.menuItems is not null %}col-xl-9 offset-xl-3{% endif %}">
                 {% component "breadcrumbs" %}
             </div>
         </div>
@@ -67,13 +67,13 @@ function onEnd()
 <div class="container-fluid py-5 border-1 border-bottom border-light" id="page">
     <div class="container-lg">
         <div class="row g-5">
-            {% if leftmenu.menuItems is not null %}
+            {% if sidebarmenu.menuItems is not null %}
                 <div class="sidebar d-none d-xl-block col-xl-3">
-                    {% component "leftmenu" %}
+                    {% component "sidebarmenu" %}
                 </div>
             {% endif %}
 
-            <div class="col {% if leftmenu.menuItems is not null %}col-xl-9{% endif %}">
+            <div class="col {% if sidebarmenu.menuItems is not null %}col-xl-9{% endif %}">
                 <h1 class="mb-4">
                     {{ page.title }}
                 </h1>

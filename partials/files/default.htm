@@ -7,10 +7,12 @@
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "xlsx"
     } %}
 
-    <ul>
+    <ul class="mb-0 ps-0 list-unstyled">
         {% for file in files %}
-            <li>
-                <a href="{{ file.file.path }}" target="_blank" class="d-inline-flex">
+            <li class="file file--with-icon">
+                <i class="ph ph-file-{{ types[file.file.content_type] }} icon__font--lg"></i>
+
+                <a href="{{ file.file.path }}" target="_blank" class="d-inline-flex file__link">
                     {{ file.name }}
                 </a>
 

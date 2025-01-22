@@ -74,9 +74,6 @@ $header-border-width:                   1px;
 $header-logo-sm-height:                 55px;           // auto for turn off - this value is relevant from breakpoint below (not included) down
 $header-logo-sm-height-breakpoint:      "xxl";          // sm, md, lg, xl, xxl
 
-$header-socials-icon-color:             $black;
-$header-socials-icon-hover-color:       $primary;
-
 $header-search-link-color:              $black;
 $header-search-link-hover-color:        $primary;
 $header-search-link-font-size:          map-get($font-sizes, 2);
@@ -241,14 +238,8 @@ $footer-bottom-bg:                      $footer-bg;
 $footer-bottom-font-size:               $footer-font-size;
 $footer-bottom-color:                   $footer-color;
 
-$footer-socials-icon-color:             $primary;
-$footer-socials-icon-hover-color:       $gray-500;
-$footer-socials-link-color:             $gray-500;
-$footer-socials-link-hover-color:       $primary;
-$footer-socials-link-font-size:         $h3-font-size;
-
-$footer-signature-color:                $footer-socials-link-color;
-$footer-signature-hover-color:          $footer-socials-link-hover-color;
+$footer-signature-color:                $gray-500;
+$footer-signature-hover-color:          $primary;
 
 $footer-nav-link-color:                 $gray-500;
 $footer-nav-link-font-weight:           $font-weight-regular;
@@ -276,12 +267,10 @@ $post-font-weight-bold:                 $font-weight-bold;
 $map-card-header-bg:                    $white;
 $map-card-footer-bg:                    $white;
 
-$sidebar-nav-bg:                        $gray-300;
-$sidebar-nav-padding-x:                 20px;
-$sidebar-nav-padding-y:                 5px;
+$sidebar-nav-bg:                        $gray-300;      // default $gray-300
+$sidebar-nav-padding-x:                 0;           // default 20px
+$sidebar-nav-padding-y:                 5px;            // default 5px
 
-$sidebar-nav-item-border-width:         1px;        // 0 for turn off
-$sidebar-nav-item-border-color:         $gray-200;
 $sidebar-nav-item-before-content:       "\E13A";    // none for turn off
 $sidebar-nav-item-before-font-family:   $font-family-icons;
 $sidebar-nav-item-before-font-size:     $font-size-sm;
@@ -290,6 +279,9 @@ $sidebar-nav-item-after-content:        none;       // none for turn off
 $sidebar-nav-item-after-font-family:    $font-family-icons;
 $sidebar-nav-item-after-font-size:      $font-size-sm;
 $sidebar-nav-item-after-color:          $primary;
+$sidebar-nav-item-separator-height:     1px;            // default 1px, 0 for turn off
+$sidebar-nav-item-separator-bg:         $gray-200;
+$sidebar-nav-item-separator-fluid:      false;
 
 $sidebar-nav-item-active-before-content:    none;       // none for turn off
 $sidebar-nav-item-active-after-content:     "\E13A";    // none for turn off
@@ -297,16 +289,51 @@ $sidebar-nav-item-active-after-content:     "\E13A";    // none for turn off
 $sidebar-nav-link-color:                $gray-500;
 $sidebar-nav-link-font-size:            $font-size-base;
 $sidebar-nav-link-font-weight:          $font-weight-regular;
+$sidebar-nav-link-bg:                   transparent;
 $sidebar-nav-link-underline-color:      $sidebar-nav-link-color;
-$sidebar-nav-link-padding-x:            0;
+$sidebar-nav-link-padding-x:            20px;           // default 0
 $sidebar-nav-link-padding-y:            10px;
 
 $sidebar-nav-link-hover-color:              $primary;
 $sidebar-nav-link-hover-underline-color:    $primary;
+$sidebar-nav-link-hover-bg:                 transparent;
 
 $sidebar-nav-link-active-color:             $primary;
 $sidebar-nav-link-active-font-weight:       $font-weight-medium;
 $sidebar-nav-link-active-underline-color:   transparent;
+$sidebar-nav-link-active-bg:                transparent;
+
+$sidebar-nav-level-1-bg:                            transparen;     // default $gray-500
+$sidebar-nav-level-1-padding:                       0 0 $sidebar-nav-link-padding-y 10px;
+
+$sidebar-nav-level-1-item-before-content:           "\E13A";    // none for turn off
+$sidebar-nav-level-1-item-before-font-family:       $font-family-icons;
+$sidebar-nav-level-1-item-before-font-size:         $font-size-sm;
+$sidebar-nav-level-1-item-before-color:             $primary;
+$sidebar-nav-level-1-item-after-content:            none;       // none for turn off
+$sidebar-nav-level-1-item-after-font-family:        $font-family-icons;
+$sidebar-nav-level-1-item-after-font-size:          $font-size-sm;
+$sidebar-nav-level-1-item-after-color:              $primary;
+
+$sidebar-nav-level-1-item-active-before-content:    none;       // none for turn off
+$sidebar-nav-level-1-item-active-after-content:     "\E13A";    // none for turn off
+
+$sidebar-nav-level-1-link-color:                    $sidebar-nav-link-color;
+$sidebar-nav-level-1-link-font-size:                $sidebar-nav-link-font-size;
+$sidebar-nav-level-1-link-font-weight:              $font-weight-regular;
+$sidebar-nav-level-1-link-bg:                       transparent;
+$sidebar-nav-level-1-link-underline-color:          $sidebar-nav-link-color;
+$sidebar-nav-level-1-link-padding-x:                $sidebar-nav-link-padding-x;
+$sidebar-nav-level-1-link-padding-y:                2px;
+
+$sidebar-nav-level-1-link-hover-color:              $primary;
+$sidebar-nav-level-1-link-hover-underline-color:    $primary;
+$sidebar-nav-level-1-link-hover-bg:                 transparent;
+
+$sidebar-nav-level-1-link-active-color:             $primary;
+$sidebar-nav-level-1-link-active-font-weight:       $font-weight-medium;
+$sidebar-nav-level-1-link-active-underline-color:   transparent;
+$sidebar-nav-level-1-link-active-bg:                transparent;
 
 $table-border-color:                    $gray-500;
 $table-cell-padding-x:                  24px;
@@ -352,17 +379,24 @@ $contact-card-contact-link-underline-color:         transparent;
 $contact-card-contact-link-hover-color:             $primary;
 $contact-card-contact-link-hover-underline-color:   $contact-card-contact-link-hover-color;
 
-$files-link-color:                                  $body-color;
-$files-link-underline-color:                        $body-color;
-$files-link-hover-color:                            $primary;
-$files-link-hover-underline-color:                  $files-link-hover-color;
+$file-link-color:                       $body-color;
+$file-link-underline-color:             $body-color;
+$file-link-hover-color:                 $primary;
+$file-link-hover-underline-color:       $file-link-hover-color;
 
-$flash-message-bg:                                  $primary;
-$flash-message-icon-font-size:                      map-get($font-sizes, 1);
-$flash-message-icon-color:                          $white;
-$flash-message-text-color:                          $white;
+$flash-message-bg:                      $primary;
+$flash-message-icon-font-size:          map-get($font-sizes, 1);
+$flash-message-icon-color:              $white;
+$flash-message-text-color:              $white;
 
-$image-text-image-border-radius:              $border-radius-lg;
+$image-text-image-border-radius:        $border-radius-lg;
+
+$icon-font-font-size:                   $font-size-base;
+$icon-font-font-size-lg:                map-get($font-sizes, 2);
+$icon-link-color:                       $body-color;
+$icon-link-hover-color:                 $primary;
+$icon-light-link-color:                 $gray-500;
+$icon-light-link-hover-color:           $icon-link-hover-color;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";

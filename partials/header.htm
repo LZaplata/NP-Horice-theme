@@ -23,7 +23,7 @@
                     {% if this.theme.phone %}
                         <div class="phone">
                             <a href="tel: {{ this.theme.phone }}" target="_blank" class="d-inline-flex text-decoration-none align-items-center gap-2 link-info fs-3">
-                                <i class="ph ph-phone icon fs-2 text-black"></i>
+                                <i class="ph ph-phone icon__font--lg"></i>
 
                                 <span>
                                     {{ this.theme.phone }}
@@ -32,29 +32,29 @@
                         </div>
                     {% endif %}
 
-{#                    {% if this.theme.facebook or this.theme.instagram or this.theme.youtube %}#}
-{#                        <div class="socials d-inline-flex align-items-center gap-2 justify-content-end">#}
-{#                            {% if this.theme.facebook %}#}
-{#                                <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none">#}
-{#    #}{#                                <i class="ph ph-facebook-logo icon"></i>#}
+                    {% if (this.theme.facebook or this.theme.instagram or this.theme.youtube) and "header" in this.theme.is_published %}
+                        <div class="socials d-inline-flex align-items-center gap-2 justify-content-end">
+                            {% if this.theme.facebook %}
+                                <a href="{{ this.theme.facebook }}" target="_blank" class="d-inline-flex text-decoration-none icon__link">
+                                    <i class="ph ph-facebook-logo icon__font--lg"></i>
 {#                                    <i class="mi mi-facebook icon"></i>#}
-{#                                </a>#}
-{#                            {% endif %}#}
+                                </a>
+                            {% endif %}
 
-{#                            {% if this.theme.instagram %}#}
-{#                                <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none">#}
-{#    #}{#                                <i class="ph ph-instagram-logo icon"></i>#}
+                            {% if this.theme.instagram %}
+                                <a href="{{ this.theme.instagram }}" target="_blank" class="d-inline-flex text-decoration-none icon__link">
+                                    <i class="ph ph-instagram-logo icon__font--lg"></i>
 {#                                    <i class="mi mi-instagram icon"></i>#}
-{#                                </a>#}
-{#                            {% endif %}#}
+                                </a>
+                            {% endif %}
 
-{#                            {% if this.theme.youtube %}#}
-{#                                <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none">#}
-{#                                    <i class="ph ph-youtube-logo icon"></i>#}
-{#                                </a>#}
-{#                            {% endif %}#}
-{#                        </div>#}
-{#                    {% endif %}#}
+                            {% if this.theme.youtube %}
+                                <a href="{{ this.theme.youtube }}" target="_blank" class="d-inline-flex text-decoration-none icon__link">
+                                    <i class="ph ph-youtube-logo icon__font--lg"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
 
                     {% if sitepicker.isEnabled %}
                         <ul class="nav nav-pills sitepicker">
