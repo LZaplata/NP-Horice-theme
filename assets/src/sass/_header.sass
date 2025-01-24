@@ -16,6 +16,11 @@ header
                 & > a, & > span
                     position: relative
 
+                    @if $nav-link-vertical-fluid
+                        display: flex
+                        align-items: center
+                        height: 100%
+
                     &:after
                         content: ""
                         position: absolute

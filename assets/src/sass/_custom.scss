@@ -109,6 +109,7 @@ $nav-link-padding-x:                    0;
 $nav-link-padding-y:                    0;
 $nav-link-font-weight:                  $font-weight-regular;
 $nav-link-font-size:                    map-get($font-sizes, 2);
+$nav-link-vertical-fluid:               false;
 $nav-link-submenu-toggler-color:        $black;
 $nav-link-submenu-toggler-font-size:    $font-size-sm;
 
@@ -353,7 +354,9 @@ $text-table-head-bg:                    $gray-300;
 $text-table-head-font-size:             $h3-font-size;
 $text-table-body-font-size:             $font-size-base;
 
-$breadcrumb-margin-bottom:              0;
+$breadcrumb-bg:                         transparent;
+$breadcrumb-padding:                    map-get($spacers, 4) 0 0;           // padding of #breadcrumb (.breadcrumb wrapper)
+$breadcrumb-margin-bottom:              0;                                  // overwrite default bootstrap .breadcrumb margin
 $breadcrumb-divider:                    "-";
 $breadcrumb-divider-color:              $body-color;
 $breadcrumb-font-size:                  $font-size-sm;
