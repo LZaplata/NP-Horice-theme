@@ -1,10 +1,13 @@
 items:
     -
         title: 'O centru NP'
+        nesting: null
         type: page
+        url: null
         code: ''
         reference: '2'
         cmsPage: page
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -63,13 +66,10 @@ items:
             isExternal: '0'
     -
         title: Kontakt
-        nesting: null
-        type: header
-        url: null
+        type: page
         code: ''
-        reference: null
-        cmsPage: null
-        replace: null
+        reference: '12'
+        cmsPage: page
         viewBag:
             isHidden: '0'
             cssClass: ''
