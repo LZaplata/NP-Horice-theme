@@ -21,6 +21,20 @@ require:
 form:
     tabs:
         fields:
+            logo:
+                label: Logo
+                type: fileupload
+                span: left
+                fileTypes: png, svg, webp
+                commentAbove: 'Pouze soubory typu PNG, SVG a WEBP jsou povoleny'
+                maxFiles: 1
+                tab: Nastavení
+            mainmenu_dropdown:
+                label: Zobrazit 2. úroveň hlavního menu
+                type: switch
+                default: false
+                span: left
+                tab: Nastavení
             phone:
                 label: Telefon
                 type: text
@@ -94,13 +108,3 @@ form:
                 type: text
                 span: left
                 tab: 'Sociální sítě'
-            mottos:
-                label: Motta
-                type: repeater
-                tab: Motta
-                itemsExpanded: false
-                form:
-                    fields:
-                        motto:
-                            label: Motto
-                            type: text
