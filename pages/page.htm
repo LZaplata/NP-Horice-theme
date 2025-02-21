@@ -28,7 +28,7 @@ categoryPage = "page"
 postPage = "page-post"
 
 [Files files]
-order = "position asc"
+order = "sort_order asc"
 
 [pricelist]
 
@@ -38,19 +38,8 @@ order = "position asc"
 function onEnd()
 {
     $code = $this["page"]->menu;
-    $contents = $this["page"]->contents;
 
     $this["sidebarmenu"]->resetMenu($code);
-
-    if (!is_null($contents)) {
-        foreach ($contents as $content) {
-            if ($content->type == "blog") {
-                $posts = $this->page->components["posts"];
-                $posts->setProperty("categoryFilter", $content->blog_category);
-                $posts->onRun();
-            }
-        }
-    }
 }
 ?>
 ==
@@ -81,18 +70,18 @@ function onEnd()
                 <div class="d-flex flex-column gap-5">
                     {% for content in page.contents %}
                         <div class="{{ content.type|slug }} {{ content.type|slug }}--{{ content.title|slug }}">
-                            {% if content.heading %}
+                            {% if content.heading and content.type != "image_text" %}
                                 <h2 class="mb-4">
                                     {{ content.heading }}
                                 </h2>
                             {% endif %}
 
                             {% if content.type == "text" %}
-                                {{ content.text|raw|bootstrap }}
+                                {{ content.text|content|bootstrap }}
+                            {% elseif content.type == "image_text" %}
+                                {% partial "_block/image-text.htm" image=content.image text=content.text heading=content.heading switched=content.switch_order %}
                             {% elseif content.type == "blog" %}
-                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 {% if leftmenu.menuItems is null %}row-cols-xl-4{% endif %} g-4">
-                                    {% component "posts" %}
-                                </div>
+                                {% component "posts" categoryFilter=content.blog_category.slug rowCols=content.row_cols partial=content.partial %}
                             {% elseif content.type == "gallery" %}
                                 {% component "gallery" gallery=content.gallery.slug %}
                             {% elseif content.type == "files" %}
@@ -110,9 +99,11 @@ function onEnd()
                             {% elseif content.type == "cookies" %}
                                 {% component "cookiesmanage" %}
                             {% elseif content.type == "contacts" %}
-                                {% set fluid = sidebarmenu.menuItems is null ? true : false %}
-
-                                {% partial "_contacts/default" layout="card" fluid=fluid %}
+                                {% partial "_contacts/default" partial=content.partial row_cols=content.row_cols %}
+                            {% elseif content.type == "jobs" %}
+                                {% partial "_jobs/default" partial=content.partial row_cols=content.row_cols post_page=content.post_page %}
+                            {% elseif content.type == "links" %}
+                                {% partial "_links/default" partial=content.partial row_cols=content.row_cols category=content.links_category %}
                             {% endif %}
                         </div>
                     {% endfor %}

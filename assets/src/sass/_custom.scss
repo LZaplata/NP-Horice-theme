@@ -23,7 +23,10 @@ $gray-500:                              #707070;
 $gray-300:                              #EEEEEE;
 $gray-200:                              #E5E4E6;
 
+$blue-500:                              #046696;
+
 $primary:                               $red-500;
+$secondary:                             $blue-500;
 $dark:                                  $gray-500;
 $light:                                 $gray-300;
 $success:                               $green-500;
@@ -150,9 +153,9 @@ $nav-level-2-link-padding-x:            0;
 $nav-level-2-link-padding-y:            3px;
 $nav-level-2-link-after-height:         0;        // 0 for turn off
 
-$border-radius-lg:                      15px;
 $border-radius:                         10px;
-$border-radius-sm:                      8px;
+$border-radius-lg:                      $border-radius * 1.5;
+$border-radius-sm:                      $border-radius * 0.8;
 
 $card-border-width:                     0;
 $card-border-radius:                    $border-radius;
@@ -219,11 +222,8 @@ $badge-padding-y:                       6px;
 $badge-border-radius:                   30px;
 
 $footer-font-size:                      $font-size-sm;
-$footer-color:                          $primary;
-$footer-bg:                             $white;
-
-$footer-logo-bg:                        $primary;
-$footer-logo-hover-bg:                  $primary;
+$footer-color:                          $body-color;
+$footer-bg:                             $light;
 
 $footer-contact-font-size:              map-get($font-sizes, 4);
 $footer-contact-link-color:             $gray-500;

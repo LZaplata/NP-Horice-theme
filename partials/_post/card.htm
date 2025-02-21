@@ -1,5 +1,5 @@
 <div class="post post-card">
-    <a href="{{ item.url }}" class="position-relative d-flex flex-column gap-3">
+    <a href="{{ link ?: item.url }}" class="position-relative d-flex flex-column gap-3">
         {% if image %}
             <p class="img mb-0 position-relative overflow-hidden">
                 {% if image.path %}
@@ -24,8 +24,12 @@
             {{ item.title }}
         </h3>
 
-    {#    <div class="excerpt mt-2 fs-13 ls-n02 transition">#}
-    {#        {{ post.excerpt|raw }}#}
-    {#    </div>#}
+        {% if item.excerpt or item.perex %}
+            <div class="perex mt-n2 text">
+                <p class="mb-0">
+                    {{ item.excerpt ?: item.perex|raw }}
+                </p>
+            </div>
+        {% endif %}
     </a>
 </div>
