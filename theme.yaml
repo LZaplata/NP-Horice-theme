@@ -12,6 +12,7 @@ require:
     - rainlab.blog
     - rainlab.translate
     - janvince.smallgdpr
+    - janvince.smallcontactform
     - lzaplata.gallery
     - lzaplata.files
     - lzaplata.extensions
@@ -27,6 +28,15 @@ form:
                 span: left
                 fileTypes: png, svg, webp
                 commentAbove: 'Pouze soubory typu PNG, SVG a WEBP jsou povoleny'
+                maxFiles: 1
+                tab: Nastavení
+            logo_sm:
+                label: Malé logo
+                type: fileupload
+                span: right
+                fileTypes: png, svg, webp
+                commentAbove: 'Pouze soubory typu PNG, SVG a WEBP jsou povoleny'
+                commentBelove: 'Toto logo je používané v patičce'
                 maxFiles: 1
                 tab: Nastavení
             mainmenu_dropdown:
@@ -116,7 +126,7 @@ form:
                 tab: 'Sociální sítě'
                 options:
                     header: Hlavička
-                #                    footer: Patička
+#                    footer: Patička
                 default: [header, footer]
             facebook:
                 label: Facebook

@@ -4,7 +4,9 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
                 <div class="col">
                     <p class="mb-0 d-flex justify-content-between align-items-center">
-                        <a href="{{ 'homepage'|page }}" class="mi mi-logo"></a>
+                        <a href="{{ 'homepage'|page }}" class="logo">
+                            <img src="{% if this.theme.logo_sm %}{{ this.theme.logo_sm.path }}{% else %}{{ 'assets/images/logo.svg'|theme }}{% endif %}" alt="logo">
+                        </a>
 
                         <a href="#footer-1" data-bs-toggle="collapse" class="toggler text-decoration-none d-sm-none">
                             <i class="ph ph-caret-up fs-2"></i>
