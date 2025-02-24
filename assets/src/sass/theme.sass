@@ -168,3 +168,23 @@ footer
             .modal-footer
                 padding: 0
                 border-top: none
+
+.post
+    &__link
+        &--bg-light
+            background: $gray-300
+            transition: $transition-base
+
+            &:hover
+                background: $gray-400
+
+.flash-message
+    &--oznameni
+        background-color: $blue-100
+
+        .flash-message
+            &__icon
+                color: $secondary
+
+                &:before
+                    content: "\E642" !important

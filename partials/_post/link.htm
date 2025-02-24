@@ -1,0 +1,17 @@
+<div class="post">
+    <a href="{{ link ?: item.url }}" class="post__link post__link--bg-light position-relative d-flex flex-row gap-3 w-100 align-items-center justify-content-center py-5 rounded-3">
+        {% if image %}
+            <p class="post__img mb-0 position-relative overflow-hidden text-center">
+                {% if image.path %}
+                    <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
+                {% else %}
+                    <img src="{{ image|media }}" alt="{{ image.description }}" class="img-fluid">
+                {% endif %}
+            </p>
+        {% endif %}
+
+        <h3 class="mb-0 fs-1 text-center fw-medium">
+            {{ item.title }}
+        </h3>
+    </a>
+</div>
