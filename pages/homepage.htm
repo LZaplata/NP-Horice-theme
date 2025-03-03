@@ -54,7 +54,7 @@ postPage = "blog/post"
                 {% component "posts" categoryFilter=block.blog_category.slug rowCols=block.row_cols partial=block.partial %}
             {% elseif block.type == "posts_slider" %}
                 {% component "postsslider" categoryFilter=block.blog_category.slug rowCols=block.row_cols %}
-            {% elseif block.type == "flash_message" %}
+            {% elseif block.type == "flash_message" categoryFilter=block.blog_category.slug %}
                 {% component "flashmessage" %}
             {% elseif block.type == "partial" %}
                 {% partial block.partial %}
