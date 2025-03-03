@@ -1,0 +1,95 @@
+<div class="row row-cols-1 g-5 row-cols-lg-2">
+    <div class="col">
+        {% component "contactform" %}
+    </div>
+
+    <div class="col">
+        <div class="contact p-4 d-flex flex-column justify-content-between gap-3 bg-light">
+            {% if this.theme.founder %}
+                <p class="mb-0 d-flex flex-column">
+                    {% if this.theme.founder %}
+                        <span>
+                            Zřizovatel: {{ this.theme.founder }}
+                        </span>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if this.theme.phone or this.theme.email %}
+                <p class="mb-0 d-flex flex-column">
+                    {% if this.theme.phone %}
+                        <a href="tel:{{ this.theme.phone }}" target="_blank" class="phone">
+                            {{ this.theme.phone }}
+                        </a>
+                    {% endif %}
+
+                    {% if this.theme.email %}
+                        <a href="mailto:{{ this.theme.email }}" target="_blank" class="email">
+                            {{ this.theme.email }}
+                        </a>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if this.theme.street or this.theme.city %}
+                <p class="mb-0 d-flex flex-column">
+                    {% if this.theme.street %}
+                        <span>
+                            {{ this.theme.street }} {{ this.theme.street_no }}
+                        </span>
+                    {% endif %}
+
+                    {% if this.theme.city %}
+                        <span>
+                            {{ this.theme.zip }} {{ this.theme.city }}
+                        </span>
+                    {% endif %}
+
+                    {% if this.theme.map_link %}
+                        <a href="{{ this.theme.map_link }}" target="_blank">
+                            Ukázat na mapě
+                        </a>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if this.theme.company_id or this.theme.company_vat_id %}
+                <p class="mb-0 d-flex flex-column">
+                    {% if this.theme.company_id %}
+                        <span>
+                            IČ: {{ this.theme.company_id }}
+                        </span>
+                    {% endif %}
+
+                    {% if this.theme.company_vat_id %}
+                        <span>
+                            DIČ: {{ this.theme.company_vat_id }}
+                        </span>
+                    {% endif %}
+
+                    {% if this.theme.databox %}
+                        <span>
+                            Datová schránka: {{ this.theme.databox }}
+                        </span>
+                    {% endif %}
+                </p>
+            {% endif %}
+
+            {% if this.theme.bank or this.theme.account_number %}
+                <p class="mb-0 d-flex flex-column">
+                    {% if this.theme.bank %}
+                        <span>
+                            Banka: {{ this.theme.bank }}
+                        </span>
+                    {% endif %}
+
+                    {% if this.theme.account_number %}
+                        <span>
+                            Číslo účtu: {{ this.theme.account_number }}
+                        </span>
+                    {% endif %}
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>

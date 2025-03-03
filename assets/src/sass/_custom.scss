@@ -155,7 +155,7 @@ $nav-level-2-link-padding-x:            0;
 $nav-level-2-link-padding-y:            3px;
 $nav-level-2-link-after-height:         0;        // 0 for turn off
 
-$border-radius:                         10px;
+$border-radius:                         0;
 $border-radius-lg:                      $border-radius * 1.5;
 $border-radius-sm:                      $border-radius * 0.8;
 
@@ -392,6 +392,7 @@ $icon-light-link-hover-color:           $icon-link-hover-color;
 
 $input-padding-x:                       map-get($spacers, 3);
 $input-padding-y:                       map-get($spacers, 3);
+$input-border-radius:                   $border-radius;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "~bootstrap/scss/variables";
@@ -490,9 +491,9 @@ $input-padding-y:                       map-get($spacers, 3);
 
 .btn {
     &.btn-primary {
-        --bs-btn-hover-color: #{$black};
-        --bs-btn-hover-bg: transparent;
-        --bs-btn-hover-border-color: #{$red-100};
+        --bs-btn-hover-color: #{$white};
+        --bs-btn-hover-bg: #{darken($primary, 10%)};
+        --bs-btn-hover-border-color: #{darken($primary, 10%)};
     }
 
     &.btn-outline-light {
