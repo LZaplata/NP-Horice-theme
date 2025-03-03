@@ -2,6 +2,8 @@
 {% set posts = __SELF__.posts %}
 {% set row_cols = __SELF__.properties.rowCols %}
 {% set partial = __SELF__.properties.partial %}
+{% set more_button_title = __SELF__.properties.moreButtonTitle %}
+{% set more_button_link = __SELF__.properties.moreButtonLink %}
 
 <div class="posts row row-cols-{{ min(1, row_cols) }} g-5 row-cols-sm-{{ min(2, row_cols) }} gx-sm-4 row-cols-lg-{{ min(3, row_cols) }} gx-lg-5 row-cols-xl-{{ min(4, row_cols) }} row-cols-xxl-{{ row_cols }}">
     {% for post in posts %}
@@ -12,6 +14,14 @@
         </div>
     {% endfor %}
 </div>
+
+{% if more_button_link and more_button_title %}
+    <p class="mt-5 mb-0 text-center">
+        <a href="{{ more_button_link|link }}" class="btn btn-primary">
+            {{ more_button_title }}
+        </a>
+    </p>
+{% endif %}
 
 {% if posts.lastPage > 1 %}
     <ul class="pagination mt-5 mb-0 d-flex justify-content-center">
