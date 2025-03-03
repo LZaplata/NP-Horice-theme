@@ -188,3 +188,15 @@ footer
 
                 &:before
                     content: "\E642" !important
+
+.posts-slider
+    &--reference
+        .text
+            p
+                -webkit-line-clamp: 6
+                /* autoprefixer: off */
+                -webkit-box-orient: vertical
+                /* autoprefixer: on */
+                overflow: hidden
+                text-overflow: ellipsis
+                display: -webkit-box
