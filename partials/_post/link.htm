@@ -1,5 +1,5 @@
 <div class="post">
-    <a href="{{ link ?: item.url }}" class="post__link post__link--bg-light position-relative d-flex flex-row gap-3 w-100 align-items-center justify-content-center py-5 rounded-3">
+    <a href="{{ link ?: item.url }}" class="post__link post__link--bg-light position-relative d-flex flex-column gap-3 w-100 align-items-center justify-content-center py-5 rounded-3 flex-lg-row">
         {% if image %}
             <p class="post__img mb-0 position-relative overflow-hidden text-center">
                 {% if image.path %}
