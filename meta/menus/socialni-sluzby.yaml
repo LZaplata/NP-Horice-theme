@@ -1,11 +1,11 @@
 items:
     -
-        title: 'Nastavení cookies'
+        title: 'Komu je služba určena'
         nesting: null
         type: page
         url: null
         code: ''
-        reference: '12'
+        reference: '21'
         cmsPage: page
         replace: null
         viewBag:
@@ -13,36 +13,33 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: GDPR
-        nesting: null
-        type: page
-        url: null
-        code: ''
-        reference: '37'
-        cmsPage: page
-        replace: null
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: 'Svobodný přístup k informacím'
+        title: 'Zdravotně sociální pracovník'
         type: page
         code: ''
-        reference: '54'
+        reference: '22'
         cmsPage: page
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Ochrana oznamovatelů'
+        title: 'Informační servis'
         type: page
         code: ''
-        reference: '55'
+        reference: '23'
         cmsPage: page
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-name: 'Odkazy v zápatí'
+    -
+        title: 'Sociální letáky'
+        type: page
+        code: ''
+        reference: '24'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Sociální služby'

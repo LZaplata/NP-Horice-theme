@@ -1,0 +1,134 @@
+items:
+    -
+        title: 'Ambulance v našem centru'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '26'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Chirurgická ambulance'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '27'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Interní ambulance'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '28'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Geriatrická ambulance'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '29'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: RDG
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '30'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Soukromé ambulance v centru'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '31'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Pediatrie MUDr. Aranka Ježková'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '32'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Pediatrie MUDr. Soňa Obršálová'
+                type: page
+                code: ''
+                reference: '33'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Diabetologická ambulance - MUDr. Josef Baraňák'
+                type: page
+                code: ''
+                reference: '34'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Neurologická ambulance - MUDr. Rastislav Martišek'
+                type: page
+                code: ''
+                reference: '35'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Gynekologická ambulance - MUDr. Pavel Trpák'
+                type: page
+                code: ''
+                reference: '36'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+name: Ambulance

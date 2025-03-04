@@ -12,64 +12,518 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Základní informace'
+                type: page
+                code: ''
+                reference: '2'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Kvalita a bezpečí'
+                type: page
+                code: ''
+                reference: '3'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Výroční zprávy'
+                type: page
+                code: ''
+                reference: '4'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Veřejné zakázky'
+                type: page
+                code: ''
+                reference: '5'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Volná místa'
+                type: page
+                code: ''
+                reference: '6'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Dokumenty
+                type: page
+                code: ''
+                reference: '7'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Reference
+                type: page
+                code: ''
+                reference: '8'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Stížnosti
+                type: page
+                code: ''
+                reference: '9'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Historie
+                type: page
+                code: ''
+                reference: '10'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Pokladna a podatelna'
+                type: page
+                code: ''
+                reference: '11'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'Lůžka NP'
         nesting: null
-        type: header
+        type: page
         url: null
         code: ''
-        reference: null
-        cmsPage: null
+        reference: '39'
+        cmsPage: page
         replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'O následné péči'
+                type: page
+                code: ''
+                reference: '39'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Stanice A'
+                type: page
+                code: ''
+                reference: '40'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Stanice B'
+                type: page
+                code: ''
+                reference: '41'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Stanice C'
+                type: page
+                code: ''
+                reference: '42'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Pro pacienty'
+                type: page
+                code: ''
+                reference: '44'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                items:
+                    -
+                        title: 'Komu můžeme pomoci'
+                        type: page
+                        code: ''
+                        reference: '44'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Vnitřní řád'
+                        type: page
+                        code: ''
+                        reference: '45'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Průběh přijetí a péče'
+                        type: page
+                        code: ''
+                        reference: '46'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Práva a povinností pacientů'
+                        type: page
+                        code: ''
+                        reference: '47'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+            -
+                title: 'Pro příbuzné'
+                type: page
+                code: ''
+                reference: '49'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                items:
+                    -
+                        title: 'Jak přispět k péči'
+                        type: page
+                        code: ''
+                        reference: '49'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+            -
+                title: Léčba
+                type: page
+                code: ''
+                reference: '50'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Rehabilitace a fyzioterapie'
+                type: page
+                code: ''
+                reference: '51'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Propuštění pacienta z lůžek NP'
+                type: page
+                code: ''
+                reference: '52'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Stravovací provoz'
+                type: page
+                code: ''
+                reference: '53'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Ambulance
         nesting: null
-        type: header
+        type: page
         url: null
         code: ''
-        reference: null
-        cmsPage: null
+        reference: '26'
+        cmsPage: page
         replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Ambulance v našem centru'
+                type: page
+                code: ''
+                reference: '26'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Chirurgická ambulance'
+                type: page
+                code: ''
+                reference: '27'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Interní ambulance'
+                type: page
+                code: ''
+                reference: '28'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Geriatrická ambulance'
+                type: page
+                code: ''
+                reference: '29'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: RDG
+                type: page
+                code: ''
+                reference: '30'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Soukromé ambulance v centru'
+                type: page
+                code: ''
+                reference: '31'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                items:
+                    -
+                        title: 'Pediatrie MUDr. Aranka Ježková'
+                        type: page
+                        code: ''
+                        reference: '32'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Pediatrie MUDr. Soňa Obršálová'
+                        type: page
+                        code: ''
+                        reference: '33'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Diabetologická ambulance - MUDr. Josef Baraňák'
+                        type: page
+                        code: ''
+                        reference: '34'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Neurologická ambulance - MUDr. Rastislav Martišek'
+                        type: page
+                        code: ''
+                        reference: '35'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
+                    -
+                        title: 'Gynekologická ambulance - MUDr. Pavel Trpák'
+                        type: page
+                        code: ''
+                        reference: '36'
+                        cmsPage: page
+                        viewBag:
+                            isHidden: '0'
+                            cssClass: ''
+                            isExternal: '0'
     -
         title: Laboratoř
         nesting: null
-        type: header
+        type: page
         url: null
         code: ''
-        reference: null
-        cmsPage: null
+        reference: '15'
+        cmsPage: page
         replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Oddělení klinické biochemie (OKB)'
+                type: page
+                code: ''
+                reference: '15'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Laboratorní příručka'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '17'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Žádanky a výsledky online'
+                type: page
+                code: ''
+                reference: '18'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Program pro samoplátce'
+                type: page
+                code: ''
+                reference: '19'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: 'Sociální služby'
         nesting: null
-        type: header
+        type: page
         url: null
         code: ''
-        reference: null
-        cmsPage: null
+        reference: '21'
+        cmsPage: page
         replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Komu je služba určena'
+                type: page
+                code: ''
+                reference: '21'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Zdravotně sociální pracovník'
+                type: page
+                code: ''
+                reference: '22'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Informační servis'
+                type: page
+                code: ''
+                reference: '23'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Sociální letáky'
+                type: page
+                code: ''
+                reference: '24'
+                cmsPage: page
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Kontakt
+        nesting: null
         type: page
+        url: null
         code: ''
-        reference: '12'
+        reference: '13'
         cmsPage: page
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -84,7 +538,7 @@ items:
         cmsPage: null
         replace: null
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'
 name: 'Main Menu'

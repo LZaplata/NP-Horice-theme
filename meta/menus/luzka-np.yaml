@@ -1,0 +1,193 @@
+items:
+    -
+        title: 'O následné péči'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '39'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Stanice A'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '40'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Stanice B'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '41'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Stanice C'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '42'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Pro pacienty'
+        type: page
+        code: ''
+        reference: '44'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Komu můžeme pomoci'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '44'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Vnitřní řád'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '45'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Průběh přijetí a péče'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '46'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Práva a povinností pacientů'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '47'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Pro příbuzné'
+        type: page
+        code: ''
+        reference: '49'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Jak přispět k péči'
+                nesting: null
+                type: page
+                url: null
+                code: ''
+                reference: '49'
+                cmsPage: page
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: Léčba
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '50'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Rehabilitace a fyzioterapie'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '51'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Propuštění pacienta z lůžek NP'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '52'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Stravovací provoz'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '53'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Lůžka NP'

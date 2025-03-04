@@ -1,11 +1,11 @@
 items:
     -
-        title: 'Nastavení cookies'
+        title: 'Oddělení klinické biochemie (OKB)'
         nesting: null
         type: page
         url: null
         code: ''
-        reference: '12'
+        reference: '15'
         cmsPage: page
         replace: null
         viewBag:
@@ -13,36 +13,33 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: GDPR
-        nesting: null
-        type: page
-        url: null
-        code: ''
-        reference: '37'
-        cmsPage: page
-        replace: null
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
-        title: 'Svobodný přístup k informacím'
+        title: 'Laboratorní příručka'
         type: page
         code: ''
-        reference: '54'
+        reference: '17'
         cmsPage: page
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Ochrana oznamovatelů'
+        title: 'Žádanky a výsledky online'
         type: page
         code: ''
-        reference: '55'
+        reference: '18'
         cmsPage: page
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-name: 'Odkazy v zápatí'
+    -
+        title: 'Program pro samoplátce'
+        type: page
+        code: ''
+        reference: '19'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Laboratoř
