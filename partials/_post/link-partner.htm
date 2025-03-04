@@ -1,0 +1,13 @@
+<div class="post">
+    <a href="{{ link ?: item.url }}" class="post__link position-relative w-100">
+        {% if image %}
+            <p class="post__img mb-0 position-relative overflow-hidden text-center">
+                {% if image.path %}
+                    <img src="{{ image.path }}" alt="{{ image.description }}" class="img-fluid">
+                {% else %}
+                    <img src="{{ image|media }}" alt="{{ image.description }}" class="img-fluid">
+                {% endif %}
+            </p>
+        {% endif %}
+    </a>
+</div>
