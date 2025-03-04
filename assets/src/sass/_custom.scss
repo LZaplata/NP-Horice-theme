@@ -515,3 +515,9 @@ $input-border-radius:                   $border-radius;
         }
     }
 }
+
+.bg {
+    &-blue-100 {
+        background-color: $blue-100 !important;
+    }
+}

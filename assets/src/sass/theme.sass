@@ -213,3 +213,15 @@ footer
             &__img
                 img
                     height: 80px
+
+.partial
+    &--kontaktni-formular
+        background-color: $red-100
+        margin-top: map-get($spacers, 5)
+        padding-bottom: map-get($spacers, 5)
+
+        .container-lg
+            padding-top: 0 !important
+
+        @include media-breakpoint-up(xl)
+            margin-top: calc(map-get($spacers, 5) + map-get($spacers, 4))
