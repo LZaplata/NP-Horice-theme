@@ -36,7 +36,7 @@ fields:
         span: left
         column: false
         maxFiles: 1
-        fileTypes: png, jpg, webp
+        fileTypes: png, jpg, webp, svg
 
     link:
         label: Odkaz
