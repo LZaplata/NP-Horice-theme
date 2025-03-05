@@ -53,5 +53,15 @@
                 position: relative
                 margin-right: 5px
 
+    ul, ol
+        li
+            color: $text-color
+
+            & + li
+                margin-top: 3px
+
+        & + p
+            margin-top: $text-gap-base
+
     h2, h3, h4, h5
         margin-bottom: $text-gap-base
