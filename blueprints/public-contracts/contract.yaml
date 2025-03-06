@@ -1,0 +1,65 @@
+uuid: lzaplata_public_contracts
+handle: PublicContracts\Contract
+type: stream
+name: Veřejné zakázky
+drafts: false
+showImport: false
+showExport: false
+multisite: true
+
+primaryNavigation:
+    label: Veřejné zakázky
+    icon: ph ph-handshake
+
+customMessages:
+    buttonCreate: Nová zakázka
+    titleCreateForm: Vytvořit zakázku
+    titleUpdateForm: Upravit zakázku
+    titleIndexList: Veřejné zakázky
+
+fields:
+    title:
+        placeholder: Název zakázky
+
+    start:
+        label: Datum zahájení
+        type: datepicker
+        mode: date
+        span: left
+
+    end:
+        label: Datum a čas ukončení
+        type: datepicker
+        mode: datetime
+        span: right
+
+    notice:
+        label: Výzva
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+        maxFiles: 1
+        span: left
+        column: false
+
+    report:
+        label: Zpráva z výběrového řízení
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+        maxFiles: 1
+        span: right
+        column: false
+
+    documentation:
+        label: Dokumentace
+        span: left
+        column: false
+
+columns:
+    title:
+        label: Název
+
+defaultSort:
+    column: start
+    direction: desc

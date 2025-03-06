@@ -1,0 +1,74 @@
+[collection contracts]
+handle = "PublicContracts\Contract"
+==
+<div class="posts row row-cols-1 g-5">
+    {% for contract in contracts %}
+        <div class="col">
+            <div class="post">
+                <h2 class="post__title mb-3">
+                    {{ contract.title }}
+                </h2>
+
+                <div class="text">
+                    <p class="d-flex align-items-center mb-0 gap-1">
+                        <i class="ph ph-clock icon__font--lg"></i>
+
+                        <span class="small">
+                            Zahájení: {{ contract.start|date("j. n. Y")}}
+                        </span>
+                    </p>
+
+                    <p class="d-flex align-items-center gap-1 mb-3">
+                        <i class="ph ph-clock-afternoon icon__font--lg"></i>
+
+                        <span class="small">
+                            Ukončení: {{ contract.end|date("j. n. Y")}} ve {{ contract.end|date("H:i") }}
+                        </span>
+                    </p>
+                </div>
+
+                {% set types = {
+                    "application/pdf": "pdf",
+                    "application/msword": "doc",
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": "xlsx"
+                } %}
+
+                <ul class="mb-0 ps-0 list-unstyled">
+                    {% if contract.notice %}
+                        <li class="file file--with-icon">
+                            <i class="ph ph-file-{{ types[contract.notice.content_type] }} icon__font--lg"></i>
+
+                            <a href="{{ contract.notice.path }}" target="_blank" class="d-inline-flex file__link">
+                                Výzva
+                            </a>
+
+                            ({{ contract.notice.file_size|filesize }}, {{ types[contract.notice.content_type] }})
+                        </li>
+                    {% endif %}
+
+                    {% if contract.report %}
+                        <li class="file file--with-icon">
+                            <i class="ph ph-file-{{ types[contract.report.content_type] }} icon__font--lg"></i>
+
+                            <a href="{{ contract.report.path }}" target="_blank" class="d-inline-flex file__link">
+                                Zpráva z výběrového řízení
+                            </a>
+
+                            ({{ contract.report.file_size|filesize }}, {{ types[contract.report.content_type] }})
+                        </li>
+                    {% endif %}
+
+                    {% if contract.documentation %}
+                        <li class="file file--with-icon">
+                            <i class="ph ph-arrow-square-out icon__font--lg"></i>
+
+                            <a href="{{ contract.documentation }}" target="_blank" class="d-inline-flex file__link">
+                                Dokumentace
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</div>
