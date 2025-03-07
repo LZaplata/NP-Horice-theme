@@ -81,7 +81,7 @@ fields:
         tab: Benefity
         column: false
 
-    contacts:
+    contacts_category:
         label: Kategorie kontaktů
         type: entries
         source: Contacts\Category
@@ -98,6 +98,8 @@ fields:
         span: right
         tab: Kontakty
         column: false
+        permissions: 
+            - lzaplata.pages.content.update.partial
 
     contacts_row_cols:
         label: Počet kontaktů na řádek
@@ -111,6 +113,8 @@ fields:
             action: hide|fill[1]
             condition: value[*/row]
             field: contacts_partial
+        permissions: 
+            - lzaplata.pages.content.update.row_cols
 
 columns:
     title:
