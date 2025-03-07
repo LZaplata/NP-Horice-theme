@@ -59,4 +59,14 @@
             {{ post.benefits|content|bootstrap }}
         </div>
     {% endif %}
+
+    {% if post.contacts_category %}
+        <div>
+            <h2 class="mb-4">
+                Kontakty
+            </h2>
+
+            {% partial "_contacts/default" partial=post.contacts_partial row_cols=post.contacts_row_cols content=post %}
+        </div>
+    {% endif %}
 </div>

@@ -81,6 +81,37 @@ fields:
         tab: Benefity
         column: false
 
+    contacts:
+        label: Kategorie kontaktů
+        type: entries
+        source: Contacts\Category
+        maxItems: 1
+        displayMode: relation
+        span: left
+        tab: Kontakty
+        column: false
+
+    contacts_partial:
+        label: Šablona
+        type: dropdown
+        optionsMethod: LZaplata\Pages\Helpers\Content::getPartialOptions
+        span: right
+        tab: Kontakty
+        column: false
+
+    contacts_row_cols:
+        label: Počet kontaktů na řádek
+        type: dropdown
+        optionsMethod: LZaplata\Pages\Helpers\Content::getRowColsOptions
+        default: 4
+        span: left
+        tab: Kontakty
+        column: false
+        trigger:
+            action: hide|fill[1]
+            condition: value[*/row]
+            field: contacts_partial
+
 columns:
     title:
         label: Název
