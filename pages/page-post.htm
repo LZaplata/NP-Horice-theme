@@ -8,17 +8,33 @@ handle = "Jobs\Job"
 identifier = "slug"
 value = "{{ :slug }}"
 
-[breadcrumbs]
-pageCode = "page"
-
 [page]
 column = "fullslug"
 value = "{{ :fullslug }}"
+
+[breadcrumbs]
+pageCode = "page"
+
+[staticMenu sidebarmenu]
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = $this["page"]->getProperties()["value"];
+}
+
+function onEnd()
+{
+    $code = $this["page"]->menu;
+
+    $this["sidebarmenu"]->resetMenu($code);
+}
+?>
 ==
 <div class="container-fluid" id="breadcrumb">
     <div class="container-lg">
         <div class="row g-5">
-            <div class="col">
+            <div class="col {% if sidebarmenu.menuItems is not null %}col-xl-9 offset-xl-3{% endif %}">
                 {% component "breadcrumbs" %}
             </div>
         </div>
@@ -27,18 +43,28 @@ value = "{{ :fullslug }}"
 
 <div class="container-fluid py-5 border-1 border-bottom border-light" id="page-post">
     <div class="container-lg">
-        {% set job_post_partial = null %}
-
-        {% for content in page.contents %}
-            {% if content.type == "jobs" %}
-                {% set job_post_partial = content.post_partial %}
+        <div class="row g-5">
+            {% if sidebarmenu.menuItems is not null %}
+                <div class="sidebar d-none d-xl-block col-xl-3">
+                    {% component "sidebarmenu" %}
+                </div>
             {% endif %}
-        {% endfor %}
 
-        {% if job %}
-            {% partial job_post_partial post=job %}
-        {% elseif post %}
-            {% partial "_post/default" %}
-        {% endif %}
+            <div class="col {% if sidebarmenu.menuItems is not null %}col-xl-9{% endif %}">
+                {% set job_post_partial = null %}
+
+                {% for content in page.contents %}
+                    {% if content.type == "jobs" %}
+                        {% set job_post_partial = content.post_partial %}
+                    {% endif %}
+                {% endfor %}
+
+                {% if job %}
+                    {% partial job_post_partial post=job %}
+                {% elseif post %}
+                    {% partial "_post/default" %}
+                {% endif %}
+            </div>
+        </div>
     </div>
 </div>
